@@ -29,6 +29,7 @@ def jumpingOnClouds(clouds):
             tmp['thunder'] += 1
             thunder_indexes.append(i)
 
+    # count clouds
     jump = 0
     current_cloud_index = 0
     for ci in cloud_indexes:
