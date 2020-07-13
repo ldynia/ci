@@ -1,5 +1,9 @@
 #!/bin/python3
 
+"""
+Link: https://www.hackerrank.com/challenges/ctci-array-left-rotation/problem
+"""
+
 import math
 import os
 import random
