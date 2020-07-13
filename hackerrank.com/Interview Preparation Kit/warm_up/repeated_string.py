@@ -11,12 +11,12 @@ def repeatedString(s, n):
     if len(s) == 1 and s == 'a':
         return n
 
+    if len(s) > n:
+        return s[:n].count('a')
+
     a_count = s.count('a')
     if len(s) == n:
         return a_count
-
-    if len(s) > n:
-        return s[:n].count('a')
 
     divisions = int(n / len(s))
     head_count = a_count * divisions
