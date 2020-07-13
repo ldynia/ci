@@ -12,7 +12,7 @@ import sys
 
 
 def rotLeft(a, d):
-    if len(a) == d or d == 0:
+    if len(a) == d:
         return a
 
     head = a[:d]
