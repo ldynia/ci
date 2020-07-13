@@ -31,7 +31,6 @@ if __name__ == '__main__':
     n = int(input())
 
     result = repeatedString(s, n)
-    print('result', result)
 
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
     fptr.write(str(result) + '\n')
