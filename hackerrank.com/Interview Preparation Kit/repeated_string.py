@@ -8,40 +8,31 @@ import sys
 
 
 def repeatedString(s, n):
-    infint_str = ''
-    if len(s) == n:
-        infint_str = s
-
     if len(s) == 1 and s == 'a':
         return n
 
-    if len(s) == 1 and s != 'a':
-        infint_str = s * n
+    a_count = s.count('a')
+    if len(s) >= n:
+        return a_count
 
-    if len(s) < n:
-        divisions = int(n / len(s))
-        print(divisions * len(s), n)
-        if n == divisions * len(s):
-            infint_str = s * divisions
-        else:
-            infint_str = s * divisions
-            tail = n - (divisions * len(s))
-            infint_str += infint_str[:tail]
+    divisions = int(n / len(s))
+    head_count = a_count * divisions
+    if n == divisions * len(s):
+        return head_count
 
-    return infint_str.count('a')
+    tail = n - (divisions * len(s))
+    tail_count = s[:tail].count('a')
+
+    return head_count + tail_count
 
 
 if __name__ == '__main__':
-
-    # s = input()
-    # n = int(input())
-
-    s = 'kmretasscityylpdhuwjirnqimlkcgxubxmsxpypgzxtenweirknjtasxtvxemtwxuarabssvqdnktqadhyktagjxoanknhgilnm'
-    n = 736778906400
+    s = input()
+    n = int(input())
 
     result = repeatedString(s, n)
-    print(result)
+    print('result', result)
 
-    # fptr = open(os.environ['OUTPUT_PATH'], 'w')
-    # fptr.write(str(result) + '\n')
-    # fptr.close()
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    fptr.write(str(result) + '\n')
+    fptr.close()
