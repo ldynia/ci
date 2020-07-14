@@ -2,8 +2,6 @@
 
 """
 amazon test id 23280666807354
-https://www.youtube.com/watch?v=ED4ateJu86I
-https://leetcode.com/problems/partition-labels/
 """
 
 import math
